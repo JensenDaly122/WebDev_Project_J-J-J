@@ -5,6 +5,9 @@ body {
   background-color: #f0ffff;
 }
 
+img1 {
+	transform: rotate(-40deg)
+}
 p1 {
     color:green
     border: 2px solid black;
