@@ -48,7 +48,7 @@ h1 {
 }
 
 .container {
-  overflow: auto;
+  overflow: hidden;
   padding-top: 55px;
   padding-bottom: 30px;
 }
@@ -84,13 +84,13 @@ h1 {
 
 .content {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 0px;
   padding: 0px;
-  border-radius:22px;
+  border-radius:50px;
   color: #ffffff;
-  overflow: hidden;
+  overflow:hidden;
   background: #000000;
   transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -103,7 +103,7 @@ h1 {
   width: 90%;
   height: 90%;
   transform: translate(-50%);
-  background: #ced8ff;
+  background: #9ec2f5;
   z-index: -1;
   transform-origin: bottom;
 
@@ -198,7 +198,7 @@ h1 {
 }
 
 #holidaytext {
-  position: absolute;
+  position:absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -207,5 +207,107 @@ h1 {
 .cardimage{
   transform: rotate(0deg);
   position:relative;
-  float:left
+  float:left;
+  height: 400px;  
+  opacity: 0.5;
+}
+
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 0 2px rgb(255, 255, 255);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: rgb(255, 255, 255);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text2 {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #212121;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px rgb(120, 120, 120);
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+.text2 {
+  color: black;
+}
+
+footer{
+  background-color: grey;
+}
+
+#footertext{
+  color:white;
 }
