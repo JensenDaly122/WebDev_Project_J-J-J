@@ -16,6 +16,18 @@ p1 {
   
 }
 
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+
 p2 {
   color:blue
   border: 2px solid black;
