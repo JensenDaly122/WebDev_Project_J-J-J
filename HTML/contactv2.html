@@ -12,6 +12,48 @@
 	<meta charset="utf-8">
 	<!-- horizontal nav bar -->
 	<style>
+		.form-container {
+			max-width: 500px;
+			margin: 0 auto;
+			text-align: left;
+		}
+
+		.form-group {
+			display: flex;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+
+		.form-group label {
+			flex: 0 0 150px;
+			font-weight: bold;
+			text-align: right;
+			margin-right: 10px;
+		}
+
+		.form-group input {
+			flex: 1;
+			padding: 8px;
+			font-size: 1rem;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+
+		.form-container input[type="submit"] {
+			margin-left: 160px;
+			/* Align the button with the input fields */
+			padding: 8px 16px;
+			background-color: #5f7f98;
+			color: white;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		.form-container input[type="submit"]:hover {
+			background-color: #4e6b82;
+		}
+
 		ul {
 			list-style-type: none;
 			margin: 0;
@@ -106,54 +148,52 @@
 		<h2>
 			Destinations:</h2>
 		<p1> Aspen, Colarado, USA Whistler Blackcomb, British Columbia, Canada Zermatt, Switzerland
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<h2>Registration
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			</h2>
+			<div class="form-container" role="form" aria-labelledby="registration-title"
+				aria-describedby="registration-instructions">
+				<h2 id="registration-title">Registration</h2>
+				<p id="registration-instructions">Please fill out the required fields and submit the form.</p>
 
-		</h2>
-		<div class="form-container">
-			<form name="myForm" action="" onsubmit="return validateForm()" method="post">
-				<div class="form-group">
-					<label for="username">Username:</label>
-					<input type="text" id="username" name="fname">
-				</div>
-				<input type="submit" value="Submit">
-			</form>
-		
-			<form name="myForm" action="" onsubmit="return validateForm()" method="post">
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="text" id="email" name="fname">
-				</div>
-				<input type="submit" value="Submit">
-			</form>
-		
-			<form name="myForm" action="" onsubmit="return validateForm()" method="post">
-				<div class="form-group">
-					<label for="phone">Phone Number:</label>
-					<input type="text" id="phone" name="fname">
-				</div>
-				<input type="submit" value="Submit">
-			</form>
-		
-			<form name="myForm" action="" onsubmit="return validateForm()" method="post">
-				<div class="form-group">
-					<label for="message">Message:</label>
-					<input type="text" id="message" name="fname">
-				</div>
-				<input type="submit" value="Submit">
-			</form>
-		</div>
+				<form name="myForm" id="registrationForm" method="post" novalidate>
+					<div class="form-group">
+						<label for="username">Username:</label>
+						<input type="text" id="username" name="username" aria-required="true"
+							aria-describedby="username-error">
+						<span id="username-error" class="error" aria-live="polite"></span>
+					</div>
 
-		
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" aria-required="true" aria-describedby="email-error">
+						<span id="email-error" class="error" aria-live="polite"></span>
+					</div>
 
-	</center>
-	</p1>
+					<div class="form-group">
+						<label for="phone">Phone Number:</label>
+						<input type="tel" id="phone" name="phone" aria-required="true" aria-describedby="phone-error">
+						<span id="phone-error" class="error" aria-live="polite"></span>
+					</div>
 
+					<div class="form-group">
+						<label for="message">Message:</label>
+						<input type="text" id="message" name="message" aria-describedby="message-error">
+						<span id="message-error" class="error" aria-live="polite"></span>
+					</div>
+
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+
+
+
+		</p1>
+		<script src="../Javascript/script.js"></script>
 </div>
 
 </body>
