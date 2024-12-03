@@ -11,15 +11,13 @@ body {
 }
 
 p1 {
-    color:green
-    border: 2px solid black;
-    padding: 1px;          
-    background-color:white
-  
+  color: green border: 2px solid black;
+  padding: 1px;
+  background-color: white
 }
 
 
-a{
+a {
   color: black;
   text-decoration: none;
 }
@@ -31,20 +29,66 @@ a:hover {
 
 
 p2 {
-  color:blue
-  border: 2px solid black;
-  padding: 1px;          
-  background-color:white
+  color: blue border: 2px solid black;
+  padding: 1px;
+  background-color: white
 }
 
 p3 {
-  color:darkblue
-  border: 2px solid black;
-  padding: 1px;          
-  background-color:white
+  color: darkblue border: 2px solid black;
+  padding: 1px;
+  background-color: white
 }
 
-h1 {
+
+<style>
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    flex: 1;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"] {
+    flex: 2;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #5f7f98;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #04a5aa;
+}
+</style>
+
+
+</style>h1 {
   color: navy;
   margin-left: 20px
 }
@@ -64,13 +108,13 @@ h1 {
 .image {
   float: right;
   width: 500px;
-  height: auto; 
+  height: auto;
 }
 
 .text {
   float: left;
-  width: 50%; 
-  padding: 20px; 
+  width: 50%;
+  padding: 20px;
 }
 
 .card {
@@ -86,13 +130,13 @@ h1 {
 
 .content {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: flex-start;
   gap: 0px;
   padding: 0px;
-  border-radius:50px;
+  border-radius: 50px;
   color: #ffffff;
-  overflow:hidden;
+  overflow: hidden;
   background: #000000;
   transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -171,46 +215,46 @@ h1 {
   height: 100%;
 }
 
-#card1{
+#card1 {
   padding-left: 3vw;
 
 }
 
-#card2{
+#card2 {
   padding-left: 18vw;
 
 }
 
-#card3{
+#card3 {
   padding-left: 17vw;
 }
 
-#card4{
+#card4 {
   padding-left: 3vw;
 
 }
 
-#card5{
+#card5 {
   padding-left: 18vw;
 
 }
 
-#card6{
+#card6 {
   padding-left: 17vw;
 }
 
 #holidaytext {
-  position:absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.cardimage{
+.cardimage {
   transform: rotate(0deg);
-  position:relative;
-  float:left;
-  height: 400px;  
+  position: relative;
+  float: left;
+  height: 400px;
   opacity: 0.5;
 }
 
@@ -306,10 +350,10 @@ h1 {
   color: black;
 }
 
-footer{
+footer {
   background-color: grey;
 }
 
-#footertext{
-  color:white;
+#footertext {
+  color: white;
 }
